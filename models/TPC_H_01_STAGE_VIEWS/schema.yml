@@ -1,0 +1,101 @@
+version: 2
+
+models:
+  - name: stg_customer_vw
+    description: "View contains customer information and created from customer table"
+    columns:
+      - name: C_NAME
+        description: "The column contains unique & not null customer name"
+        tests:
+          - unique 
+          - not_null
+
+  - name: stg_lineitem_vw
+    description: "View contains line item information and created from line item table"
+    columns:
+      - name: L_ORDERKEY
+        description: "The column contains line order key"
+        tests:
+          - not_null
+      - name: L_PARTKEY
+        description: "The column contains part key"
+        tests:
+          - not_null
+      - name: L_SUPPKEY
+        description: "The column contains supplier key"
+        tests:
+          - not_null
+      - name: L_LINENUMBER
+        description: "The column contains line number"
+        tests:
+          - not_null
+
+  - name: stg_nation_vw
+    description: "View contains nation information and created from nation table"
+    columns:
+      - name: N_NAME
+        description: "The column contains unique & not null nation name"
+        tests:
+          - unique 
+          - not_null
+
+  - name: stg_order_vw
+    description: "View contains order information and created from order table"
+    columns:
+      - name: O_ORDERKEY
+        description: "The column contains unique & not null order name"
+        tests:
+          - unique 
+          - not_null
+      - name: O_CUSTKEY
+        description: "The column contains not null customer key"
+        tests:
+          - not_null
+
+  - name: stg_part_vw
+    description: "View contains part  information and created from part table"
+    columns:
+      - name: P_PARTKEY
+        description: "The column contains not null & Unique part key"
+        tests:
+          - unique
+          - not_null
+      - name: P_NAME
+        description: "The column contains unique & not null part name"
+        tests:
+          - not_null
+
+  - name: stg_partsupp_vw
+    description: "View contains part supplier information and created from part supplier table"
+    columns:
+      - name: PS_PARTKEY
+        description: "The column contains not null part key"
+        tests:
+          - not_null
+      - name: PS_SUPPKEY
+        description: "The column contains not null supplier key"
+        tests:
+          - not_null
+
+  - name: stg_region_vw
+    description: "View contains region information and created from region table"
+    columns:
+      - name: R_NAME
+        description: "The column contains region name and it is a primary key"
+        tests:
+          - unique 
+          - not_null
+
+  - name: stg_supplier_vw
+    description: "View contains supplier information and created from supplier table"
+    columns:
+      - name: S_SUPPKEY
+        description: "The column contains supplier key name and it is a primary key"
+        tests:
+          - unique 
+          - not_null
+      - name: S_NAME
+        description: "The column contains supplier name and it is a primary key"
+        tests:
+          - unique 
+          - not_null

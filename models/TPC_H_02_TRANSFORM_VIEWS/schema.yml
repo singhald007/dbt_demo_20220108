@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: trnf_nation_vw
+    description: "View contains region and nation information"
+    columns:
+      - name: N_NAME
+        description: "The column contains nation name"
+      - name: R_NAME
+        description: "The column contains region name"
+
+  - name: trnf_supplier_vw
+    description: "View contains supplier information along with region and country"
+    columns:
+      - name: S_NAME
+        description: "The column contains supplier name"
+      - name: N_NAME
+        description: "The column contains nation name"
+      - name: R_NAME
+        description: "The column contains region name"
+
+  - name: trnf_customer_vw
+    description: "View contains customer information along with region and country"
+    columns:
+      - name: C_NAME
+        description: "The column contains customer name"
+      - name: N_NAME
+        description: "The column contains nation name"
+      - name: R_NAME
+        description: "The column contains region name"        
+
+  - name: trnf_partsupp_vw
+    description: "View contains parts & supplier information along with region and country"
+    columns:
+      - name: C_NAME
+        description: "The column contains customer name"
+      - name: N_NAME
+        description: "The column contains nation name"
+      - name: R_NAME
+        description: "The column contains region name"
+      - name: S_NAME
+        description: "The column contains supplier name"
+      - name: P_NAME
+        description: "The column contains part name"
+
+  - name: trnf_order_vw
+    description: "View contains order & customer information along with region and country"
+    columns:
+      - name: C_NAME
+        description: "The column contains customer name"
+      - name: N_NAME
+        description: "The column contains nation name"
+      - name: R_NAME
+        description: "The column contains region name" 
+
+  - name: trnf_lineitem_vw
+    description: "View contains order line item information along with region, country, parts, supplier, customer and order information"
+    columns:
+      - name: L_LINENUMBER
+        description: "The column contains line item number"
+      - name: L_QUANTITY
+        description: "The column contains order quantity"
+      - name: C_NAME
+        description: "The column contains customer name"
+      - name: N_NAME
+        description: "The column contains nation name"
+      - name: R_NAME
+        description: "The column contains region name"
+      - name: S_NAME
+        description: "The column contains supplier name"
+      - name: P_NAME
+        description: "The column contains part name"        
