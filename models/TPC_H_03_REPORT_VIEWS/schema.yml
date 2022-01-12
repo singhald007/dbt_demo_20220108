@@ -15,3 +15,8 @@ models:
         description: "The column contains region name"
       - name: country
         description: "The column contains country name"
+  - name: udm_minimum_cost_supplier_vw
+    description: "UDM view contains supplier name who can provide minimum cost in agien given region for a given part"
+    columns:
+      - name: region
+        description: "The column contains region name"
