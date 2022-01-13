@@ -6,8 +6,16 @@ models:
     columns:
       - name: N_NAME
         description: "The column contains nation name"
+        tests:
+          - relationships:
+              to: ref('stg_nation_vw')
+              field: N_NAME
       - name: R_NAME
         description: "The column contains region name"
+        tests:
+          - relationships:
+              to: ref('stg_region_vw')
+              field: R_NAME
 
   - name: trnf_supplier_vw
     description: "View contains supplier information along with region and country"

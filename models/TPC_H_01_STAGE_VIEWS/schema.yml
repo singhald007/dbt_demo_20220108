@@ -1,6 +1,17 @@
 version: 2
 
 models:
+  - name: stg_region_vw
+    description: "View contains region information and created from region table"
+    columns:
+      - name: R_NAME
+        description: "The column contains region name and it is a primary key"
+        tests:
+          - unique 
+          - not_null
+          - accepted_values:
+              values: ['AFRICA', 'AMERICA', 'ASIA', 'EUROPE', 'MIDDLE EAST']
+
   - name: stg_customer_vw
     description: "view contains customer information and created from customer table"
     columns:
@@ -77,16 +88,6 @@ models:
         tests:
           - not_null
 
-  - name: stg_region_vw
-    description: "View contains region information and created from region table"
-    columns:
-      - name: R_NAME
-        description: "The column contains region name and it is a primary key"
-        tests:
-          - unique 
-          - not_null
-          - accepted_values:
-              values: ['AFRICA', 'AMERICA', 'ASIA', 'EUROPE', 'MIDDLE EAST']
   - name: stg_supplier_vw
     description: "View contains supplier information and created from supplier table"
     columns:

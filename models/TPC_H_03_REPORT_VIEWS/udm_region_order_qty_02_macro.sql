@@ -1,5 +1,5 @@
 /* Marerized as table or view */
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 {%- set N_NAME = get_country_methods() -%}
 
 
