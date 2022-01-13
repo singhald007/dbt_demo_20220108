@@ -3,7 +3,7 @@
 {%- set N_NAME = get_country_methods() -%}
 
 
-with source_data as (
+with source_data as (  
 select 
        R_NAME region,
 {% for N_NAME in N_NAME %}
