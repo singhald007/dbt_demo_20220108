@@ -85,7 +85,8 @@ models:
         tests:
           - unique 
           - not_null
-
+          - accepted_values:
+              values: ['AFRICA', 'AMERICA', 'ASIA', 'EUROPE', 'MIDDLE EAST']
   - name: stg_supplier_vw
     description: "View contains supplier information and created from supplier table"
     columns:
