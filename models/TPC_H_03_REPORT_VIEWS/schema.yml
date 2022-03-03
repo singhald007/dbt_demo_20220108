@@ -20,3 +20,13 @@ models:
         description: "The column contains region name"
       - name: country
         description: "The column contains country name"
+  - name: udm_region_order_qty_01_regular
+    description: "UDM view contains region order information"
+    columns:
+      - name: R_NAME
+        description: "The column contains region name"
+  - name: udm_region_order_qty_02_macro
+    description: "UDM view contains region order information"
+    columns:
+      - name: R_NAME
+        description: "The column contains region name"
