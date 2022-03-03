@@ -1,22 +1,22 @@
 version: 2
 
 models:
-  - name: udm_pricing_summary_vw
+  - name: udm_01_pricing_summary_vw
     description: "UDM view contains pricing summary information"
     columns:
       - name: l_returnflag
         description: "The column contains return name"
       - name: l_linestatus
         description: "The column contains line status"
-  - name: udm_order_pricing_summary_vw
+  - name: udm_02_minimum_cost_supplier_vw
+    description: "UDM view contains supplier name who can provide minimum cost in agien given region for a given part"
+    columns:
+      - name: region
+        description: "The column contains region name"
+  - name: udm_order_03_pricing_summary_vw
     description: "UDM view contains pricing summary information"
     columns:
       - name: region
         description: "The column contains region name"
       - name: country
         description: "The column contains country name"
-  - name: udm_minimum_cost_supplier_vw
-    description: "UDM view contains supplier name who can provide minimum cost in agien given region for a given part"
-    columns:
-      - name: region
-        description: "The column contains region name"
